@@ -1,0 +1,3173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Employer - Hire the Best Talent</title>
+    <!-- Fonts: Manrope & Caveat matching index.html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Manrope:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Site Stylesheet from index.html -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        /* ==========================================================================
+           FOR EMPLOYER / OVERVIEW HERO SECTION - MATCHING INDEX.HTML THEME & SIZES
+           ========================================================================== */
+
+        /* Hero Section Container & Theme Background */
+        .ov-hero {
+            position: relative;
+            background: radial-gradient(circle at 85% 20%, rgba(219, 234, 254, 0.7) 0%, transparent 45%),
+                        radial-gradient(circle at 10% 80%, rgba(239, 246, 255, 0.85) 0%, transparent 45%),
+                        linear-gradient(135deg, #f8fbff 0%, #edf4fe 55%, #e2eeff 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 95px 0 25px 0;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        /* Aesthetic Minimal Background Graphics System */
+        .ov-bg-graphics {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Ambient Glowing Blobs */
+        .ov-bg-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(85px);
+            pointer-events: none;
+        }
+
+        .ov-blob-1 {
+            top: -100px;
+            left: -100px;
+            width: 560px;
+            height: 560px;
+            background: rgba(255, 255, 255, 0.88);
+        }
+
+        .ov-blob-2 {
+            top: 10%;
+            right: 6%;
+            width: 640px;
+            height: 640px;
+            background: radial-gradient(circle, rgba(147, 197, 253, 0.42) 0%, rgba(191, 219, 254, 0.18) 55%, transparent 75%);
+        }
+
+        .ov-blob-3 {
+            bottom: -90px;
+            right: 22%;
+            width: 580px;
+            height: 580px;
+            background: radial-gradient(circle, rgba(96, 165, 250, 0.22) 0%, rgba(219, 234, 254, 0.1) 50%, transparent 70%);
+        }
+
+        /* Subtle Precision Tech Grid with Soft Radial Mask */
+        .ov-bg-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(to right, rgba(0, 82, 255, 0.038) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 82, 255, 0.038) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(ellipse 80% 70% at 50% 45%, black 25%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 45%, black 25%, transparent 80%);
+            opacity: 0.95;
+        }
+
+        /* Fluid Organic Background Waves (Matching index.html) */
+        .ov-bg-waves {
+            position: absolute;
+            right: -4%;
+            top: 0;
+            width: 68%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        /* Subtle Aesthetic Geometric Sparkle Accents */
+        .ov-bg-sparkle {
+            position: absolute;
+            color: #3b82f6;
+            opacity: 0.28;
+            pointer-events: none;
+        }
+
+        .ov-sparkle-1 {
+            top: 130px;
+            left: 47%;
+            width: 18px;
+            height: 18px;
+        }
+
+        .ov-sparkle-2 {
+            top: 260px;
+            right: 48%;
+            width: 14px;
+            height: 14px;
+            opacity: 0.22;
+        }
+
+        .ov-sparkle-3 {
+            bottom: 140px;
+            right: 6%;
+            width: 16px;
+            height: 16px;
+            opacity: 0.25;
+        }
+
+        .ov-container {
+            max-width: 1440px;
+            width: 94%;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ov-main-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 580px;
+            gap: 48px;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        /* -- LEFT COLUMN (Matching index.html Typography & Sizes) -- */
+        .ov-left-col {
+            max-width: 630px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .ov-eyebrow {
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 2.4px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .ov-title {
+            font-size: 3.85rem;
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--text-dark);
+            margin-bottom: 22px;
+        }
+
+        .ov-title span.highlight {
+            color: var(--primary-blue);
+            font-style: italic;
+        }
+        
+        .ov-title span.dark {
+            color: var(--text-dark);
+            font-style: normal;
+        }
+
+        .ov-title .line-nowrap {
+            white-space: nowrap;
+        }
+
+        .ov-desc {
+            font-size: 1.08rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 34px;
+            max-width: 530px;
+            font-weight: 400;
+        }
+
+        /* -- FEATURES GRID -- */
+        .ov-features-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 34px;
+        }
+
+        .ov-feature-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ov-feature-icon {
+            width: 44px;
+            height: 44px;
+            background: #eef5ff;
+            border: 1px solid #d4e5ff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 6px rgba(0, 82, 255, 0.05);
+        }
+
+        .ov-feature-text h4 {
+            font-size: 0.94rem;
+            line-height: 1.25;
+            color: #0a0f1d;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        .ov-feature-text p {
+            font-size: 0.76rem;
+            line-height: 1.35;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        /* -- CTA BUTTONS -- */
+        .ov-cta-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .ov-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 15px 34px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.98rem;
+            text-decoration: none;
+            box-shadow: 0 10px 24px -2px rgba(0, 82, 255, 0.38);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            border: none;
+            gap: 8px;
+        }
+
+        .ov-btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px -2px rgba(0, 82, 255, 0.45);
+        }
+
+        .ov-btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--white);
+            color: var(--primary-blue);
+            border: 1px solid #dce4ee;
+            padding: 15px 34px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.98rem;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .ov-btn-secondary:hover {
+            border-color: var(--primary-blue);
+            background-color: #f8fbff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 82, 255, 0.12);
+        }
+
+        .ov-trust-text {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .ov-trust-text i {
+            color: #f59e0b;
+            font-size: 0.9rem;
+        }
+
+        /* -- RIGHT STAGE (Visual Ecosystem Stack) -- */
+        .ov-right-col {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ov-stage {
+            position: relative;
+            width: 580px;
+            height: 520px;
+        }
+
+        .ov-stage-bg {
+            position: absolute;
+            inset: -25px -25px -25px -25px;
+            background: radial-gradient(circle at 50% 50%, rgba(219, 234, 254, 0.75) 0%, rgba(239, 246, 255, 0.4) 60%, transparent 75%);
+            border-radius: 40% 60% 50% 50% / 50% 45% 55% 50%;
+            filter: blur(40px);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Cards Base */
+        .ov-card {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+            position: absolute;
+            border: 1px solid rgba(226, 232, 240, 0.85);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+            z-index: 1;
+        }
+
+        /* Job Description Card */
+        .ov-jd-card {
+            width: 340px;
+            top: 15px;
+            left: 20px;
+            padding: 22px 20px 32px;
+            transform: rotate(-6deg);
+            z-index: 1;
+        }
+
+        .jd-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .jd-icon {
+            width: 32px;
+            height: 32px;
+            background: #eff6ff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-size: 1rem;
+        }
+
+        .jd-header h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .jd-role-box {
+            margin-bottom: 14px;
+        }
+
+        .jd-role-box h4 {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .jd-tags {
+            display: flex;
+            gap: 6px;
+        }
+
+        .jd-tag {
+            background: #eff6ff;
+            color: var(--primary-blue);
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #dbeafe;
+        }
+
+        .jd-body-skeleton .skel-line {
+            height: 7px;
+            background: #f1f5f9;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+        /* AI Processor Card */
+        .ov-ai-card {
+            width: 175px;
+            top: 45px;
+            right: 25px;
+            padding: 20px 16px;
+            transform: rotate(5.5deg);
+            z-index: 2;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ai-chip-box {
+            margin-bottom: 8px;
+        }
+
+        .ai-card-title {
+            font-size: 0.74rem;
+            font-weight: 600;
+            color: #475569;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        .ai-progress-track {
+            width: 100%;
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .ai-progress-bar {
+            width: 75%;
+            height: 100%;
+            background: linear-gradient(90deg, #0052ff, #38bdf8);
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 82, 255, 0.4);
+        }
+
+        /* Candidates Stack - Clean, Perfectly Arranged Stacking */
+        .ov-candidates-stack {
+            position: absolute;
+            top: 185px;
+            left: 55px;
+            width: 470px;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .candidate-card {
+            position: relative;
+            background: #ffffff;
+            padding: 12px 16px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 25px rgba(0, 82, 255, 0.06), 0 2px 8px rgba(15, 23, 42, 0.03);
+            border: 1px solid rgba(226, 232, 240, 0.85);
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+        }
+
+        .candidate-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 32px rgba(0, 82, 255, 0.1);
+        }
+
+        .cand-card-1 {
+            z-index: 3;
+            transform: rotate(-2.5deg);
+            transform-origin: bottom left;
+        }
+
+        .cand-card-1:hover {
+            transform: rotate(-2.5deg) translateY(-2px);
+            box-shadow: 0 16px 32px rgba(0, 82, 255, 0.1);
+        }
+
+        .cand-card-2 {
+            z-index: 2;
+        }
+
+        .cand-card-3 {
+            z-index: 1;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+        }
+
+        .cand-avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .status-dot-green {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            width: 11px;
+            height: 11px;
+            background-color: #22c55e;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+        }
+
+        .cand-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .cand-info h4 {
+            font-size: 0.98rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 2px;
+            line-height: 1.2;
+        }
+
+        .cand-info p {
+            font-size: 0.78rem;
+            color: #64748b;
+            margin-bottom: 5px;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        .cand-skills {
+            display: flex;
+            gap: 5px;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+
+        .cand-skills span {
+            background: #f0f5fc;
+            color: #2563eb;
+            font-size: 0.7rem;
+            padding: 2.5px 7px;
+            border-radius: 6px;
+            font-weight: 600;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        /* Match Pill */
+        .match-pill {
+            margin-left: auto;
+            background-color: #dcfce7;
+            color: #15803d;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .match-pill i {
+            font-size: 0.72rem;
+        }
+
+
+        /* ----- BOTTOM STATS ROW (Matching index.html Scale) ----- */
+        .ov-stats-row {
+            margin-top: 15px;
+            padding: 24px 0 8px 0;
+            border-top: 1px solid rgba(203, 213, 225, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .stat-icon {
+            width: 44px;
+            height: 44px;
+            background: #eff6ff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .stat-text h4 {
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .stat-text p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Features Bar at bottom of Section 2 matching reference image */
+        .emp-dash-main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.12fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .emp-dash-features-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            align-items: center;
+            border-top: 1px solid rgba(203, 213, 225, 0.6);
+            padding: 30px 0 10px 0;
+            width: 100%;
+        }
+
+        .emp-dash-feat-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 0 24px;
+            border-right: 1px solid rgba(226, 232, 240, 0.9);
+            box-sizing: border-box;
+        }
+
+        .emp-dash-feat-item:first-child {
+            padding-left: 0;
+        }
+
+        .emp-dash-feat-item:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        .emp-dash-feat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #eff6ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-size: 1.15rem;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0, 82, 255, 0.06);
+        }
+
+        .emp-dash-feat-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .emp-dash-feat-text h4 {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.25;
+            margin: 0 0 3px 0;
+        }
+
+        .emp-dash-feat-text p {
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            line-height: 1.38;
+            margin: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .emp-dash-main-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .emp-dash-features-bar {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            .emp-dash-feat-item {
+                border-right: none;
+                padding: 0;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .emp-dash-features-bar {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1180px) {
+            .ov-main-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            .ov-left-col {
+                max-width: 100%;
+                text-align: center;
+            }
+            .ov-desc {
+                margin: 0 auto 36px;
+            }
+            .ov-cta-row {
+                justify-content: center;
+            }
+            .ov-trust-text {
+                justify-content: center;
+            }
+            .ov-features-row {
+                text-align: left;
+            }
+            .ov-stats-row {
+                flex-wrap: wrap;
+                gap: 24px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 16px;
+            }
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+            .ov-hero {
+                padding: 95px 0 40px;
+                min-height: auto;
+            }
+            .ov-title {
+                font-size: 2.15rem;
+                line-height: 1.15;
+            }
+            .ov-title .line-nowrap {
+                white-space: normal !important;
+            }
+            .ov-features-row {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 12px;
+            }
+            .ov-right-col {
+                width: 100%;
+                overflow: hidden;
+            }
+            .ov-stage {
+                width: 580px;
+                transform: scale(0.58);
+                transform-origin: top center;
+                margin-bottom: -210px;
+            }
+        }
+
+        /* ==========================================================================
+           SECTION 2: POST A JOB TODAY / SHOWPIECE DASHBOARD PREVIEW
+           THEME ALIGNED & VECTORIZED BACKGROUND SYSTEM
+           ========================================================================== */
+        .emp-dash-section {
+            position: relative;
+            background: radial-gradient(circle at 85% 20%, rgba(219, 234, 254, 0.7) 0%, transparent 45%),
+                        radial-gradient(circle at 10% 80%, rgba(239, 246, 255, 0.85) 0%, transparent 45%),
+                        linear-gradient(135deg, #f8fbff 0%, #edf4fe 55%, #e2eeff 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 95px 0 30px 0;
+            overflow: hidden;
+            box-sizing: border-box;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            border-top: 1px solid rgba(219, 234, 254, 0.8);
+        }
+
+        /* Vectorized Background Graphics System */
+        .emp-dash-bg-graphics {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Subtle Precision Tech Grid */
+        .emp-dash-bg-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(to right, rgba(0, 82, 255, 0.038) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 82, 255, 0.038) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, black 30%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, black 30%, transparent 80%);
+            opacity: 0.95;
+        }
+
+        /* Fluid Organic Background Vector Waves */
+        .emp-dash-bg-waves {
+            position: absolute;
+            right: -4%;
+            top: 0;
+            width: 68%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.75;
+        }
+
+        /* Vector SVG Organic Blobs Behind Showpiece Mockup */
+        .emp-dash-vector-blobs {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 620px;
+            height: 620px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Vector Sparkle Accents */
+        .emp-dash-sparkle {
+            position: absolute;
+            color: var(--primary-blue);
+            opacity: 0.28;
+            pointer-events: none;
+        }
+
+        .emp-dash-sparkle-1 {
+            top: 120px;
+            left: 45%;
+            width: 18px;
+            height: 18px;
+        }
+
+        .emp-dash-sparkle-2 {
+            top: 240px;
+            right: 48%;
+            width: 14px;
+            height: 14px;
+            opacity: 0.22;
+        }
+
+        .emp-dash-sparkle-3 {
+            bottom: 110px;
+            right: 6%;
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Grid Container */
+        .emp-dash-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1320px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Left Column Content */
+        .emp-dash-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 520px;
+        }
+
+        .emp-dash-eyebrow {
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2.2px;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .emp-dash-title {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--text-dark);
+            letter-spacing: -0.03em;
+            margin: 0 0 24px 0;
+        }
+
+        .emp-dash-title .highlight-blue-italic {
+            font-style: italic;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .emp-dash-desc {
+            font-size: 16px;
+            line-height: 1.68;
+            color: var(--text-muted);
+            font-weight: 450;
+            margin: 0 0 36px 0;
+        }
+
+        .emp-dash-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-dash-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 15px 34px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.98rem;
+            text-decoration: none;
+            box-shadow: 0 10px 24px -2px rgba(0, 82, 255, 0.38);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            border: none;
+            gap: 8px;
+        }
+
+        .btn-dash-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px -2px rgba(0, 82, 255, 0.45);
+        }
+
+        .btn-dash-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--white);
+            color: var(--primary-blue);
+            border: 1px solid #dce4ee;
+            padding: 15px 34px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.98rem;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-dash-secondary:hover {
+            border-color: var(--primary-blue);
+            background-color: #f8fbff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 82, 255, 0.12);
+        }
+
+        .emp-dash-footnote {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Right Column: Non-Functional Showpiece Mockup Card */
+        .emp-dash-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Showpiece Mockup Frame - Non-functional, pointer-events none */
+        .dash-card-frame {
+            background: #ffffff;
+            border-radius: 28px;
+            border: 1px solid rgba(219, 234, 254, 0.9);
+            box-shadow: 0 25px 60px -15px rgba(0, 82, 255, 0.08), 0 4px 16px rgba(10, 17, 40, 0.03);
+            width: 100%;
+            max-width: 590px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            pointer-events: none; /* Strictly a non-functional showpiece */
+            user-select: none;
+            -webkit-user-select: none;
+            cursor: default;
+        }
+
+        /* Topbar Header Row */
+        .dash-topbar-panel {
+            background: #ffffff;
+            padding: 18px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .dash-topbar-brand-nav {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+
+        .dash-topbar-brand {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--text-dark);
+            letter-spacing: -0.01em;
+        }
+
+        .dash-brand-accent {
+            color: var(--primary-blue);
+        }
+
+        .dash-topbar-nav {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .dash-topbar-nav span {
+            font-size: 12.5px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .dash-topbar-nav span.active {
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .dash-topbar-avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--text-dark);
+            color: #ffffff;
+            font-size: 11.5px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Middle Box: Senior Product Designer + Metrics */
+        .dash-job-panel {
+            background: #ffffff;
+            padding: 22px 28px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .dash-job-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .dash-job-title-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dash-job-title {
+            font-size: 16.5px;
+            font-weight: 800;
+            color: var(--text-dark);
+            letter-spacing: -0.01em;
+            margin: 0;
+        }
+
+        .dash-badge-live {
+            background: #dcfce7;
+            color: var(--success-green);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dash-badge-live::before {
+            content: "";
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--success-green);
+        }
+
+        .dash-job-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-dash-edit {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #475569;
+            display: inline-block;
+        }
+
+        .dash-job-more {
+            color: #94a3b8;
+            font-size: 14px;
+            padding: 2px 4px;
+        }
+
+        /* Metadata Row */
+        .dash-job-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 8px;
+            font-size: 11.5px;
+            color: var(--text-muted);
+        }
+
+        .dash-job-meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dash-job-meta-item i {
+            color: var(--primary-blue);
+            font-size: 11px;
+            opacity: 0.85;
+        }
+
+        /* 4 Metrics Tiles */
+        .dash-metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .dash-metric-card {
+            background: #f8fbff;
+            border: 1px solid #edf4fe;
+            border-radius: 12px;
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .dash-metric-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dash-metric-val {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .dash-metric-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        .dash-metric-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+        }
+
+        .dash-metric-icon.views-icon {
+            color: var(--primary-blue);
+        }
+
+        .dash-metric-icon.applicants-icon {
+            color: #7c3aed;
+        }
+
+        .dash-metric-icon.shortlisted-icon {
+            color: var(--yellow-badge);
+        }
+
+        .dash-metric-icon.hired-icon {
+            color: var(--success-green);
+        }
+
+        /* Bottom Box: Recent applicants */
+        .dash-applicants-panel {
+            background: #ffffff;
+            padding: 22px 28px 26px 28px;
+        }
+
+        .dash-applicants-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .dash-applicants-title {
+            font-size: 14.5px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        .dash-applicants-viewall {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Applicants list */
+        .dash-applicants-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dash-applicant-item {
+            padding: 11px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .dash-applicant-item:last-child {
+            border-bottom: none;
+            padding-bottom: 2px;
+        }
+
+        .dash-applicant-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .dash-applicant-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .avatar-sl {
+            background: #eff6ff;
+            color: var(--primary-blue);
+        }
+
+        .avatar-dk {
+            background: #f5f3ff;
+            color: #7c3aed;
+        }
+
+        .avatar-ap {
+            background: #dcfce7;
+            color: var(--success-green);
+        }
+
+        .dash-applicant-details {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .dash-applicant-name {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--text-dark);
+        }
+
+        .dash-applicant-role {
+            font-size: 11.5px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .dash-applicant-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-dash-shortlist {
+            background: rgba(0, 82, 255, 0.06);
+            border: 1px solid rgba(0, 82, 255, 0.18);
+            border-radius: 9999px;
+            padding: 5px 16px;
+            font-size: 11.5px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            display: inline-block;
+        }
+
+        .dash-applicant-more {
+            color: #94a3b8;
+            font-size: 14px;
+            padding: 2px 4px;
+        }
+
+        /* Features Bar at bottom of Section 2 matching reference image */
+        .emp-dash-main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.12fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .emp-dash-features-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            align-items: center;
+            border-top: 1px solid rgba(203, 213, 225, 0.6);
+            padding: 30px 0 10px 0;
+            width: 100%;
+        }
+
+        .emp-dash-feat-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 0 24px;
+            border-right: 1px solid rgba(226, 232, 240, 0.9);
+            box-sizing: border-box;
+        }
+
+        .emp-dash-feat-item:first-child {
+            padding-left: 0;
+        }
+
+        .emp-dash-feat-item:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        .emp-dash-feat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #eff6ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-size: 1.15rem;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0, 82, 255, 0.06);
+        }
+
+        .emp-dash-feat-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .emp-dash-feat-text h4 {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.25;
+            margin: 0 0 3px 0;
+        }
+
+        .emp-dash-feat-text p {
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            line-height: 1.38;
+            margin: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .emp-dash-main-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .emp-dash-features-bar {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            .emp-dash-feat-item {
+                border-right: none;
+                padding: 0;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .emp-dash-features-bar {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .emp-dash-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                padding: 0 24px;
+            }
+            .emp-dash-content {
+                max-width: 100%;
+                text-align: center;
+                align-items: center;
+            }
+            .emp-dash-title {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .emp-dash-title {
+                font-size: 32px;
+            }
+            .dash-metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .emp-dash-actions {
+                justify-content: center;
+            }
+        }
+
+        /* ==========================================================================
+           SECTION 3: THREE WAYS TO BUILD YOUR TEAM (3-CARD SHOWCASE)
+           ========================================================================== */
+        .emp-ways-section {
+            position: relative;
+            background: radial-gradient(circle at 15% 15%, rgba(219, 234, 254, 0.65) 0%, transparent 42%),
+                        radial-gradient(circle at 85% 85%, rgba(239, 246, 255, 0.85) 0%, transparent 42%),
+                        linear-gradient(135deg, #f8fbff 0%, #edf4fe 55%, #e2eeff 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 70px 0 60px 0;
+            overflow: hidden;
+            box-sizing: border-box;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            border-top: 1px solid rgba(219, 234, 254, 0.8);
+            scroll-margin-top: 80px;
+        }
+
+        /* Vectorized Background Graphics System */
+        .emp-ways-bg-graphics {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .emp-ways-bg-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(to right, rgba(0, 82, 255, 0.038) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 82, 255, 0.038) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, black 30%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, black 30%, transparent 80%);
+            opacity: 0.95;
+        }
+
+        .emp-ways-bg-waves {
+            position: absolute;
+            left: -4%;
+            top: 0;
+            width: 68%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.7;
+            transform: scaleX(-1);
+        }
+
+        /* Main Container */
+        .emp-ways-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1360px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Section Header */
+        .emp-ways-header {
+            position: relative;
+            text-align: center;
+            max-width: 820px;
+            width: 100%;
+            margin-bottom: 38px;
+        }
+
+        /* Handwritten Accent Notes inside header area */
+        .hw-note {
+            position: absolute;
+            font-family: 'Caveat', cursive;
+            color: var(--primary-blue);
+            line-height: 1.15;
+            font-size: 28px;
+            font-weight: 700;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .hw-note-left {
+            top: 24px;
+            left: -190px;
+            transform: rotate(-10deg);
+        }
+
+        .hw-note-right {
+            top: 20px;
+            right: -190px;
+            transform: rotate(8deg);
+        }
+
+        .hw-stroke {
+            display: block;
+            margin-top: 3px;
+        }
+
+        .emp-ways-eyebrow {
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2.2px;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .emp-ways-title {
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--text-dark);
+            letter-spacing: -0.025em;
+            margin: 0 0 14px 0;
+        }
+
+        .emp-ways-title .highlight-blue-italic {
+            font-style: italic;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .emp-ways-subtitle {
+            font-size: 15.5px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            font-weight: 450;
+            margin: 0 auto;
+            max-width: 700px;
+        }
+
+        /* Carousel Outer Wrapper */
+        .emp-ways-carousel-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        /* 3 Cards Grid */
+        .emp-ways-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            width: 100%;
+            align-items: stretch;
+        }
+
+        /* Card Base with High-End Design & Micro-Details */
+        .way-card {
+            background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+            border-radius: 24px;
+            border: 1px solid rgba(219, 234, 254, 0.9);
+            box-shadow: 0 12px 32px -10px rgba(0, 82, 255, 0.06), 0 4px 16px rgba(10, 17, 40, 0.02);
+            padding: 34px 30px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+                        box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+                        border-color 0.35s ease;
+        }
+
+        .way-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 82, 255, 0.35);
+            box-shadow: 0 24px 48px -12px rgba(0, 82, 255, 0.14), 0 8px 24px -4px rgba(10, 17, 40, 0.04);
+        }
+
+        /* Card Header Row with Heading in Top-Right Corner */
+        .way-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Number Badge with Modern Squircle & Hover Pop */
+        .way-num-badge {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            color: var(--primary-blue);
+            font-size: 15px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0, 82, 255, 0.16);
+            box-shadow: 0 2px 8px rgba(0, 82, 255, 0.06);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .way-card:hover .way-num-badge {
+            background: linear-gradient(135deg, #0052ff 0%, #2563eb 100%);
+            color: #ffffff;
+            border-color: #0052ff;
+            transform: scale(1.06) rotate(-3deg);
+            box-shadow: 0 6px 18px rgba(0, 82, 255, 0.32);
+        }
+
+        /* Heading in top-right corner of each box with Live Indicator Dot */
+        .way-stage-badge {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.6px;
+            color: var(--primary-blue);
+            background: #eff6ff;
+            padding: 6px 14px;
+            border-radius: 30px;
+            border: 1px solid rgba(0, 82, 255, 0.16);
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .way-stage-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+            display: inline-block;
+            transition: background 0.35s ease, transform 0.35s ease;
+        }
+
+        .way-card:hover .way-stage-badge {
+            background: var(--primary-blue);
+            color: #ffffff;
+            border-color: var(--primary-blue);
+            box-shadow: 0 4px 14px rgba(0, 82, 255, 0.22);
+            transform: translateY(-1px);
+        }
+
+        .way-card:hover .way-stage-badge::before {
+            background: #ffffff;
+            transform: scale(1.2);
+        }
+
+        /* Card Content */
+        .way-card-content {
+            margin-bottom: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .way-card-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.25;
+            margin: 0 0 12px 0;
+            min-height: 60px;
+            display: flex;
+            align-items: flex-end;
+            transition: color 0.3s ease;
+        }
+
+        .way-card:hover .way-card-title {
+            color: #0b192c;
+        }
+
+        .way-card-desc {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin: 0 0 22px 0;
+            min-height: 68px;
+            transition: color 0.3s ease;
+        }
+
+        .way-card:hover .way-card-desc {
+            color: #475569;
+        }
+
+        /* Feature Checklist with Staggered Slide & Glowing Icons */
+        .way-checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        .way-check-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 13.5px;
+            font-weight: 550;
+            color: #334155;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+        }
+
+        .way-check-icon {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #eff6ff;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            flex-shrink: 0;
+            border: 1px solid rgba(0, 82, 255, 0.12);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .way-card:hover .way-check-item {
+            color: #0f172a;
+            transform: translateX(4px);
+        }
+
+        .way-card:hover .way-check-icon {
+            background: #0052ff;
+            color: #ffffff;
+            border-color: #0052ff;
+            box-shadow: 0 3px 10px rgba(0, 82, 255, 0.3);
+            transform: scale(1.08);
+        }
+
+        .way-card .way-check-item:nth-child(1) { transition-delay: 0.02s; }
+        .way-card .way-check-item:nth-child(2) { transition-delay: 0.05s; }
+        .way-card .way-check-item:nth-child(3) { transition-delay: 0.08s; }
+
+        /* Responsive */
+        @media (max-width: 1280px) {
+            .hw-note-left {
+                left: -40px;
+            }
+            .hw-note-right {
+                right: -40px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hw-note {
+                display: none;
+            }
+            .emp-ways-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .way-card-title, .way-card-desc {
+                min-height: auto;
+            }
+        }
+
+        /* ==========================================================================
+           SECTION 4: SUCCESS STORIES - EXPANDED SIZES & FILLED PROPERLY
+           ========================================================================== */
+        .stories-section {
+            position: relative;
+            background: radial-gradient(circle at 10% 20%, rgba(219, 234, 254, 0.5) 0%, transparent 45%),
+                        radial-gradient(circle at 90% 80%, rgba(239, 246, 255, 0.7) 0%, transparent 45%),
+                        linear-gradient(180deg, #edf4fe 0%, #f8fbff 50%, #ffffff 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 70px 0;
+            overflow: hidden;
+            box-sizing: border-box;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            border-top: 1px solid rgba(219, 234, 254, 0.8);
+            scroll-margin-top: 80px;
+        }
+
+        .stories-bg-graphics {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .stories-bg-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(to right, rgba(0, 82, 255, 0.035) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 82, 255, 0.035) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, black 30%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, black 30%, transparent 80%);
+            opacity: 0.95;
+        }
+
+        .stories-bg-waves {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.65;
+        }
+
+        .stories-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1560px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .stories-header {
+            position: relative;
+            text-align: center;
+            max-width: 860px;
+            width: 100%;
+            margin-bottom: 44px;
+        }
+
+        .stories-eyebrow-wrap {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .stories-eyebrow-line {
+            width: 36px;
+            height: 1.5px;
+            background: rgba(0, 82, 255, 0.35);
+        }
+
+        .stories-eyebrow {
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+        }
+
+        .stories-title {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.15;
+            color: #0f172a;
+            letter-spacing: -0.025em;
+            margin: 0 0 14px 0;
+        }
+
+        .stories-title .highlight-blue-italic {
+            font-style: italic;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .stories-subtitle {
+            font-size: 16.5px;
+            line-height: 1.6;
+            color: #64748b;
+            font-weight: 450;
+            margin: 0 auto;
+            max-width: 720px;
+        }
+
+        .hw-note-story {
+            position: absolute;
+            font-family: 'Caveat', cursive;
+            color: var(--primary-blue);
+            line-height: 1.15;
+            font-size: 28px;
+            font-weight: 700;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .hw-story-left {
+            top: 4px;
+            left: -195px;
+            transform: rotate(-8deg);
+        }
+
+        .hw-story-right {
+            top: 2px;
+            right: -195px;
+            transform: rotate(6deg);
+        }
+
+        .hw-swoosh {
+            display: block;
+            margin: 4px auto 0 auto;
+            overflow: visible;
+        }
+
+        /* 4 Cards Grid - Fully fills the page comfortably */
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 26px;
+            width: 100%;
+            align-items: stretch;
+        }
+
+        .story-card {
+            background: #ffffff;
+            border-radius: 24px;
+            border: 1px solid rgba(219, 234, 254, 0.95);
+            box-shadow: 0 14px 34px -8px rgba(0, 82, 255, 0.08), 0 4px 18px rgba(10, 17, 40, 0.02);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 36px 26px 30px 26px;
+            position: relative;
+            box-sizing: border-box;
+            min-height: 420px;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 82, 255, 0.38);
+            box-shadow: 0 24px 50px -10px rgba(0, 82, 255, 0.16), 0 8px 24px rgba(10, 17, 40, 0.04);
+        }
+
+        .story-quote-mark {
+            color: var(--primary-blue);
+            font-size: 24px;
+            margin-bottom: 16px;
+            opacity: 0.9;
+            line-height: 1;
+        }
+
+        .story-quote-text {
+            font-size: 16px;
+            line-height: 1.72;
+            color: #1e293b;
+            margin: 0 0 24px 0;
+            font-weight: 450;
+            flex-grow: 1;
+        }
+
+        .story-card-footer {
+            margin-top: auto;
+        }
+
+        .story-user-meta {
+            margin-bottom: 16px;
+        }
+
+        .story-user-name {
+            font-size: 18px;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0 0 3px 0;
+        }
+
+        .story-user-role {
+            font-size: 14px;
+            font-weight: 550;
+            color: #64748b;
+            margin: 0 0 12px 0;
+        }
+
+        .story-company-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .story-company-logo {
+            height: 25px;
+            width: auto;
+            max-width: 44px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .story-company-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .story-company-name {
+            font-size: 13.5px;
+            font-weight: 800;
+            color: #1e293b;
+            line-height: 1.2;
+        }
+
+        .story-location {
+            font-size: 12px;
+            font-weight: 500;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .story-location i {
+            font-size: 10px;
+            color: #94a3b8;
+        }
+
+        .story-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding-top: 16px;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .story-skill-tag {
+            font-size: 11px;
+            font-weight: 600;
+            color: #1e40af;
+            background: #eff6ff;
+            padding: 4px 9px;
+            border-radius: 6px;
+            border: 1px solid rgba(0, 82, 255, 0.12);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 1280px) {
+            .hw-story-left {
+                left: -35px;
+            }
+            .hw-story-right {
+                right: -35px;
+            }
+            .stories-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hw-note-story {
+                display: none;
+            }
+            .stories-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .stories-title {
+                font-size: 36px;
+            }
+            .story-card {
+                min-height: auto;
+                padding: 26px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar (Shared with index.html) -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">LoremIpsum<span class="logo-accent">:</span></a>
+            </div>
+            <nav class="nav-links">
+                <a href="For_Employeer.html" class="active">Overview</a>
+                <a href="Post_A_Job.html">Post a job</a>
+                <a href="#">Pricing</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="ov-hero">
+        <!-- Aesthetic Minimal Background System -->
+        <div class="ov-bg-graphics">
+            <div class="ov-bg-blob ov-blob-1"></div>
+            <div class="ov-bg-blob ov-blob-2"></div>
+            <div class="ov-bg-blob ov-blob-3"></div>
+            <div class="ov-bg-grid"></div>
+            <svg class="ov-bg-waves" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M750,-120 C920,180 1200,220 1650,80 L1650,-120 Z" fill="url(#heroWave1)" opacity="0.38"/>
+                <path d="M680,950 C880,580 1250,540 1650,720 L1650,950 Z" fill="url(#heroWave2)" opacity="0.32"/>
+                <path d="M920,950 C1100,480 1350,320 1680,480 L1680,950 Z" fill="url(#heroWave3)" opacity="0.2"/>
+                <defs>
+                    <linearGradient id="heroWave1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#bfdbfe"/>
+                        <stop offset="100%" stop-color="#3b82f6"/>
+                    </linearGradient>
+                    <linearGradient id="heroWave2" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#60a5fa"/>
+                        <stop offset="100%" stop-color="#93c5fd"/>
+                    </linearGradient>
+                    <linearGradient id="heroWave3" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#3b82f6"/>
+                        <stop offset="100%" stop-color="#dbeafe"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <!-- Minimal Geometric Sparkles -->
+            <svg class="ov-bg-sparkle ov-sparkle-1" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/>
+            </svg>
+            <svg class="ov-bg-sparkle ov-sparkle-2" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/>
+            </svg>
+            <svg class="ov-bg-sparkle ov-sparkle-3" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/>
+            </svg>
+        </div>
+
+        <div class="ov-container">
+            
+            <div class="ov-main-grid">
+                
+                <!-- Left Content -->
+                <div class="ov-left-col">
+                    <div class="ov-eyebrow">THE AI HIRING PLATFORM</div>
+                    <h1 class="ov-title">
+                        Hire from a<br>
+                        network that<br>
+                        <span class="line-nowrap"><span class="highlight">actually writes</span> <span class="dark">back.</span></span>
+                    </h1>
+                    <p class="ov-desc">
+                        Find pre-screened, job-ready talent with AI. Post a job, get the best matching candidates from our network and partner platforms — faster, smarter, simpler.
+                    </p>
+
+                    <!-- Features -->
+                    <div class="ov-features-row">
+                        <div class="ov-feature-item">
+                            <div class="ov-feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <div class="ov-feature-text">
+                                <h4>AI Matching</h4>
+                                <p>Best-fit candidates in minutes</p>
+                            </div>
+                        </div>
+                        <div class="ov-feature-item">
+                            <div class="ov-feature-icon"><i class="fa-solid fa-users"></i></div>
+                            <div class="ov-feature-text">
+                                <h4>Active Talent</h4>
+                                <p>Ready to join</p>
+                            </div>
+                        </div>
+                        <div class="ov-feature-item">
+                            <div class="ov-feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="ov-feature-text">
+                                <h4>Verified Profiles</h4>
+                                <p>Real skills, real experience</p>
+                            </div>
+                        </div>
+                        <div class="ov-feature-item">
+                            <div class="ov-feature-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                            <div class="ov-feature-text">
+                                <h4>Faster Hiring</h4>
+                                <p>From search to shortlist</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTAs -->
+                    <div class="ov-cta-row">
+                        <a href="#" class="ov-btn-primary">Find your next candidate <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="Post_A_Job.html" class="ov-btn-secondary">Post a job</a>
+                    </div>
+                    <div class="ov-trust-text">
+                        <i class="fa-solid fa-star"></i> Trusted by 2,500+ companies across India
+                    </div>
+                </div>
+
+                <!-- Right Stage -->
+                <div class="ov-right-col">
+                    <div class="ov-stage">
+                        <!-- Soft Atmospheric Glow -->
+                        <div class="ov-stage-bg"></div>
+
+                        <!-- Job Description Card -->
+                        <div class="ov-card ov-jd-card">
+                            <div class="jd-header">
+                                <div class="jd-icon"><i class="fa-solid fa-file-lines"></i></div>
+                                <h3>Job Description</h3>
+                            </div>
+                            <div class="jd-role-box">
+                                <h4>Senior Backend Engineer</h4>
+                                <div class="jd-tags">
+                                    <span class="jd-tag">Bengaluru</span>
+                                    <span class="jd-tag">Remote</span>
+                                    <span class="jd-tag">Full-time</span>
+                                </div>
+                            </div>
+                            <div class="jd-body-skeleton">
+                                <div class="skel-line" style="width: 100%;"></div>
+                                <div class="skel-line" style="width: 85%;"></div>
+                                <div class="skel-line" style="width: 65%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- AI Processor Card -->
+                        <div class="ov-card ov-ai-card">
+                            <div class="ai-chip-box">
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 2v4M22 2v4M30 2v4M14 38v4M22 38v4M30 38v4M2 14h4M2 22h4M2 30h4M38 14h4M38 22h4M38 30h4" stroke="#0052ff" stroke-width="2" stroke-linecap="round"/>
+                                    <rect x="6" y="6" width="32" height="32" rx="8" fill="#0052ff"/>
+                                    <text x="22" y="27" font-family="'Manrope', sans-serif" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">AI</text>
+                                </svg>
+                            </div>
+                            <p class="ai-card-title">Analyzing skills,<br>experience, intent...</p>
+                            <div class="ai-progress-track">
+                                <div class="ai-progress-bar"></div>
+                            </div>
+                        </div>
+
+                        <!-- Candidates Stack -->
+                        <div class="ov-candidates-stack">
+                            
+                            <!-- Candidate 1 -->
+                            <div class="candidate-card cand-card-1">
+                                <div class="avatar-wrapper">
+                                    <img src="avatar_rahul.png" alt="Rahul Mehta" class="cand-avatar">
+                                    <span class="status-dot-green"></span>
+                                </div>
+                                <div class="cand-info">
+                                    <h4>Rahul Mehta</h4>
+                                    <p>Senior Backend Engineer</p>
+                                    <div class="cand-skills">
+                                        <span>Python</span>
+                                        <span>FastAPI</span>
+                                        <span>AWS</span>
+                                        <span>5+ yrs</span>
+                                    </div>
+                                </div>
+                                <div class="match-pill">
+                                    <i class="fa-solid fa-check"></i> 95% Match
+                                </div>
+                            </div>
+
+                            <!-- Candidate 2 -->
+                            <div class="candidate-card cand-card-2">
+                                <div class="avatar-wrapper">
+                                    <img src="avatar_priya.png" alt="Priya Sharma" class="cand-avatar">
+                                </div>
+                                <div class="cand-info">
+                                    <h4>Priya Sharma</h4>
+                                    <p>Backend Developer</p>
+                                    <div class="cand-skills">
+                                        <span>Java</span>
+                                        <span>Spring Boot</span>
+                                        <span>AWS</span>
+                                        <span>4+ yrs</span>
+                                    </div>
+                                </div>
+                                <div class="match-pill">
+                                    <i class="fa-solid fa-check"></i> 88% Match
+                                </div>
+                            </div>
+
+                            <!-- Candidate 3 -->
+                            <div class="candidate-card cand-card-3">
+                                <div class="avatar-wrapper">
+                                    <img src="avatar_amit.png" alt="Amit Verma" class="cand-avatar">
+                                </div>
+                                <div class="cand-info">
+                                    <h4>Amit Verma</h4>
+                                    <p>Software Engineer</p>
+                                    <div class="cand-skills">
+                                        <span>Node.js</span>
+                                        <span>Docker</span>
+                                        <span>Kubernetes</span>
+                                        <span>3+ yrs</span>
+                                    </div>
+                                </div>
+                                <div class="match-pill">
+                                    <i class="fa-solid fa-check"></i> 84% Match
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Stats Row (Matching index.html scale) -->
+            <div class="ov-stats-row">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-building"></i></div>
+                    <div class="stat-text">
+                        <h4>2,500+</h4>
+                        <p>Companies hiring</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-text">
+                        <h4>5M+</h4>
+                        <p>Verified professionals</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <div class="stat-text">
+                        <h4>70%</h4>
+                        <p>Faster time to hire</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+                    <div class="stat-text">
+                        <h4>4.8/5</h4>
+                        <p>Customer satisfaction</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: FOR EMPLOYERS - POST A JOB TODAY / SHOWPIECE DASHBOARD
+         VECTORIZED BACKGROUND SYSTEM & THEME MATCHED
+         ========================================================================== -->
+    <section class="emp-dash-section" id="post-job-today">
+        <!-- Vectorized Background Graphics System -->
+        <div class="emp-dash-bg-graphics">
+            <!-- Subtle Precision Tech Grid -->
+            <div class="emp-dash-bg-grid"></div>
+
+            <!-- Fluid Organic Vector Background Waves (Theme Gradients) -->
+            <svg class="emp-dash-bg-waves" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M750,-120 C920,180 1200,220 1650,80 L1650,-120 Z" fill="url(#dashWave1)" opacity="0.32"/>
+                <path d="M680,950 C880,580 1250,540 1650,720 L1650,950 Z" fill="url(#dashWave2)" opacity="0.28"/>
+                <path d="M920,950 C1100,480 1350,320 1680,480 L1680,950 Z" fill="url(#dashWave3)" opacity="0.18"/>
+                <defs>
+                    <linearGradient id="dashWave1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#bfdbfe"/>
+                        <stop offset="100%" stop-color="#0052ff"/>
+                    </linearGradient>
+                    <linearGradient id="dashWave2" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#3b82f6"/>
+                        <stop offset="100%" stop-color="#93c5fd"/>
+                    </linearGradient>
+                    <linearGradient id="dashWave3" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#0052ff"/>
+                        <stop offset="100%" stop-color="#dbeafe"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <!-- Vector SVG Organic SaaS Blobs behind the showpiece card -->
+            <svg class="emp-dash-vector-blobs" viewBox="0 0 750 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Left Upper Organic Shape -->
+                <path d="M190,120 C280,75 370,130 365,230 C360,330 255,385 165,355 C75,325 55,215 105,155 C135,115 165,145 190,120 Z" fill="url(#vecBlobGrad1)"/>
+                <!-- Bottom Left Organic Shape -->
+                <path d="M220,410 C310,400 375,480 345,570 C315,650 205,660 135,610 C65,560 85,460 155,420 C185,400 205,415 220,410 Z" fill="url(#vecBlobGrad2)"/>
+                <!-- Top Center Organic Shape -->
+                <path d="M470,60 C580,30 670,90 650,180 C630,270 530,280 450,250 C370,220 390,110 440,75 C455,65 460,65 470,60 Z" fill="url(#vecBlobGrad3)"/>
+                <!-- Right Lower Organic Shape -->
+                <path d="M670,370 C770,350 820,450 780,550 C740,640 630,650 560,580 C490,510 530,420 610,380 C640,365 655,375 670,370 Z" fill="url(#vecBlobGrad1)"/>
+                <defs>
+                    <linearGradient id="vecBlobGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#bfdbfe" stop-opacity="0.8"/>
+                        <stop offset="100%" stop-color="#dbeafe" stop-opacity="0.6"/>
+                    </linearGradient>
+                    <linearGradient id="vecBlobGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#dbeafe" stop-opacity="0.8"/>
+                        <stop offset="100%" stop-color="#93c5fd" stop-opacity="0.5"/>
+                    </linearGradient>
+                    <linearGradient id="vecBlobGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#eff6ff" stop-opacity="0.85"/>
+                        <stop offset="100%" stop-color="#dbeafe" stop-opacity="0.6"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <!-- Vector Geometric Sparkles -->
+            <svg class="emp-dash-sparkle emp-dash-sparkle-1" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/>
+            </svg>
+            <svg class="emp-dash-sparkle emp-dash-sparkle-2" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/>
+            </svg>
+            <svg class="emp-dash-sparkle emp-dash-sparkle-3" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/>
+            </svg>
+        </div>
+
+        <div class="emp-dash-container">
+            <div class="emp-dash-main-grid">
+                <!-- Left Column Content -->
+                <div class="emp-dash-content">
+                    <div class="emp-dash-eyebrow">FOR EMPLOYERS</div>
+                    <h2 class="emp-dash-title">
+                        Post a job today.<br>
+                        <span class="highlight-blue-italic">Meet exceptional</span><br>
+                        <span class="highlight-blue-italic">talent tomorrow.</span>
+                    </h2>
+                    <p class="emp-dash-desc">
+                        Create a job listing in minutes and reach a diverse pool of qualified candidates. Our AI helps your job get in front of the right people &mdash; so you can hire faster and focus on what matters.
+                    </p>
+                    <div class="emp-dash-actions">
+                        <a href="Post_A_Job.html" class="btn-dash-primary">
+                            Post a job for free <span class="btn-arrow">&rarr;</span>
+                        </a>
+                        <a href="#" class="btn-dash-secondary">View pricing</a>
+                    </div>
+                    <div class="emp-dash-footnote">No credit card required. Unlimited job listings.</div>
+                </div>
+
+                <!-- Right Column: Purely Decorative / Non-Functional Showpiece Mockup Card -->
+                <div class="emp-dash-visual" aria-hidden="true">
+                    <div class="dash-card-frame">
+                        
+                        <!-- Topbar Panel (Non-functional showpiece) -->
+                        <div class="dash-topbar-panel">
+                            <div class="dash-topbar-brand-nav">
+                                <span class="dash-topbar-brand">LoremIpsum<span class="dash-brand-accent">:</span></span>
+                                <div class="dash-topbar-nav">
+                                    <span class="active">Jobs</span>
+                                    <span>Candidates</span>
+                                    <span>Messages</span>
+                                    <span>Analytics</span>
+                                </div>
+                            </div>
+                            <div class="dash-topbar-avatar">A</div>
+                        </div>
+
+                        <!-- Middle Box: Job Details & Metrics (Non-functional showpiece) -->
+                        <div class="dash-job-panel">
+                            <div class="dash-job-header-row">
+                                <div class="dash-job-title-badge">
+                                    <h3 class="dash-job-title">Senior Product Designer</h3>
+                                    <span class="dash-badge-live">Live</span>
+                                </div>
+                                <div class="dash-job-actions">
+                                    <span class="btn-dash-edit">Edit job</span>
+                                    <span class="dash-job-more"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="dash-job-meta">
+                                <span class="dash-job-meta-item"><i class="fa-solid fa-location-dot"></i> Remote</span>
+                                <span class="dash-job-meta-item"><i class="fa-solid fa-briefcase"></i> Full-time</span>
+                                <span class="dash-job-meta-item"><i class="fa-solid fa-calendar-days"></i> Posted 2 days ago</span>
+                            </div>
+
+                            <!-- 4 Metrics Grid -->
+                            <div class="dash-metrics-grid">
+                                <!-- Metric 1: Views (Theme Primary Blue) -->
+                                <div class="dash-metric-card">
+                                    <div class="dash-metric-info">
+                                        <span class="dash-metric-val">2,384</span>
+                                        <span class="dash-metric-label">Views</span>
+                                    </div>
+                                    <div class="dash-metric-icon views-icon">
+                                        <i class="fa-solid fa-chart-simple"></i>
+                                    </div>
+                                </div>
+                                <!-- Metric 2: Applicants (Purple) -->
+                                <div class="dash-metric-card">
+                                    <div class="dash-metric-info">
+                                        <span class="dash-metric-val">186</span>
+                                        <span class="dash-metric-label">Applicants</span>
+                                    </div>
+                                    <div class="dash-metric-icon applicants-icon">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+                                </div>
+                                <!-- Metric 3: Shortlisted (Gold/Yellow Theme) -->
+                                <div class="dash-metric-card">
+                                    <div class="dash-metric-info">
+                                        <span class="dash-metric-val">24</span>
+                                        <span class="dash-metric-label">Shortlisted</span>
+                                    </div>
+                                    <div class="dash-metric-icon shortlisted-icon">
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <!-- Metric 4: Hired (Green Theme) -->
+                                <div class="dash-metric-card">
+                                    <div class="dash-metric-info">
+                                        <span class="dash-metric-val">6</span>
+                                        <span class="dash-metric-label">Hired</span>
+                                    </div>
+                                    <div class="dash-metric-icon hired-icon">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Box: Recent applicants (Non-functional showpiece) -->
+                        <div class="dash-applicants-panel">
+                            <div class="dash-applicants-header">
+                                <h4 class="dash-applicants-title">Recent applicants</h4>
+                                <span class="dash-applicants-viewall">View all &rarr;</span>
+                            </div>
+
+                            <div class="dash-applicants-list">
+                                <!-- Applicant 1: Sarah Lee -->
+                                <div class="dash-applicant-item">
+                                    <div class="dash-applicant-left">
+                                        <div class="dash-applicant-avatar avatar-sl">SL</div>
+                                        <div class="dash-applicant-details">
+                                            <span class="dash-applicant-name">Sarah Lee</span>
+                                            <span class="dash-applicant-role">Product Designer &middot; 5 yrs exp</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-applicant-right">
+                                        <span class="btn-dash-shortlist">Shortlist</span>
+                                        <span class="dash-applicant-more"><i class="fa-solid fa-ellipsis"></i></span>
+                                    </div>
+                                </div>
+
+                                <!-- Applicant 2: Daniel Kim -->
+                                <div class="dash-applicant-item">
+                                    <div class="dash-applicant-left">
+                                        <div class="dash-applicant-avatar avatar-dk">DK</div>
+                                        <div class="dash-applicant-details">
+                                            <span class="dash-applicant-name">Daniel Kim</span>
+                                            <span class="dash-applicant-role">UX/UI Designer &middot; 4 yrs exp</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-applicant-right">
+                                        <span class="btn-dash-shortlist">Shortlist</span>
+                                        <span class="dash-applicant-more"><i class="fa-solid fa-ellipsis"></i></span>
+                                    </div>
+                                </div>
+
+                                <!-- Applicant 3: Aisha Patel -->
+                                <div class="dash-applicant-item">
+                                    <div class="dash-applicant-left">
+                                        <div class="dash-applicant-avatar avatar-ap">AP</div>
+                                        <div class="dash-applicant-details">
+                                            <span class="dash-applicant-name">Aisha Patel</span>
+                                            <span class="dash-applicant-role">Product Designer &middot; 6 yrs exp</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-applicant-right">
+                                        <span class="btn-dash-shortlist">Shortlist</span>
+                                        <span class="dash-applicant-more"><i class="fa-solid fa-ellipsis"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom 4-Feature Bar (Matching Image) -->
+            <div class="emp-dash-features-bar">
+                <!-- Feature 1: Reach Top Talent -->
+                <div class="emp-dash-feat-item">
+                    <div class="emp-dash-feat-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div class="emp-dash-feat-text">
+                        <h4>Reach Top Talent</h4>
+                        <p>Get in front of passive and active candidates.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Smart Matching -->
+                <div class="emp-dash-feat-item">
+                    <div class="emp-dash-feat-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="emp-dash-feat-text">
+                        <h4>Smart Matching</h4>
+                        <p>AI suggests the best candidates for your role.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Save Time -->
+                <div class="emp-dash-feat-item">
+                    <div class="emp-dash-feat-icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <div class="emp-dash-feat-text">
+                        <h4>Save Time</h4>
+                        <p>Automate screening and focus on great conversations.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Better Hires -->
+                <div class="emp-dash-feat-item">
+                    <div class="emp-dash-feat-icon">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+                    <div class="emp-dash-feat-text">
+                        <h4>Better Hires</h4>
+                        <p>Access data and insights to make confident decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: THREE WAYS TO BUILD YOUR TEAM (3-CARD SHOWCASE)
+         ========================================================================== -->
+    <section class="emp-ways-section" id="three-ways-to-hire">
+        <!-- Vectorized Background Graphics System -->
+        <div class="emp-ways-bg-graphics">
+            <!-- Precision Tech Grid -->
+            <div class="emp-ways-bg-grid"></div>
+
+            <!-- Fluid Organic Vector Waves -->
+            <svg class="emp-ways-bg-waves" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M750,-120 C920,180 1200,220 1650,80 L1650,-120 Z" fill="url(#waysWave1)" opacity="0.32"/>
+                <path d="M680,950 C880,580 1250,540 1650,720 L1650,950 Z" fill="url(#waysWave2)" opacity="0.28"/>
+                <path d="M920,950 C1100,480 1350,320 1680,480 L1680,950 Z" fill="url(#waysWave3)" opacity="0.18"/>
+                <defs>
+                    <linearGradient id="waysWave1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#bfdbfe"/>
+                        <stop offset="100%" stop-color="#0052ff"/>
+                    </linearGradient>
+                    <linearGradient id="waysWave2" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#3b82f6"/>
+                        <stop offset="100%" stop-color="#93c5fd"/>
+                    </linearGradient>
+                    <linearGradient id="waysWave3" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#0052ff"/>
+                        <stop offset="100%" stop-color="#dbeafe"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        
+
+        <div class="emp-ways-container">
+            <!-- Header -->
+            <div class="emp-ways-header">
+                <!-- Handwritten Accent Notes relative to header -->
+                <div class="hw-note hw-note-left">
+                    Right Talent<br>Faster.
+                    <svg class="hw-stroke" viewBox="0 0 80 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 8 C25 2, 55 10, 78 3" stroke="#0052ff" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <div class="hw-note hw-note-right">
+                    Stronger Teams<br>Brighter Tomorrow.
+                    <svg class="hw-stroke" viewBox="0 0 100 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 9 C35 2, 70 10, 98 4" stroke="#0052ff" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <div class="emp-ways-eyebrow">FOR EMPLOYERS</div>
+                <h2 class="emp-ways-title">
+                    Three ways to<br>
+                    <span class="highlight-blue-italic">build your team.</span>
+                </h2>
+                <p class="emp-ways-subtitle">
+                    Whether you want to post jobs, proactively source talent, or let AI do the heavy lifting &mdash; we give you the flexibility to hire the right people, your way.
+                </p>
+            </div>
+
+            <!-- Carousel Outer Wrapper with side arrow buttons -->
+            <div class="emp-ways-carousel-wrapper">
+
+
+                <!-- 3 Cards Grid -->
+                <div class="emp-ways-grid">
+                    
+                    <!-- Card 1: Attract / Post Jobs -->
+                    <div class="way-card">
+                        <div class="way-card-top">
+                            <div class="way-num-badge">01</div>
+                            <div class="way-stage-badge">ATTRACT</div>
+                        </div>
+
+                        <div class="way-card-content">
+                            <h3 class="way-card-title">Post Jobs</h3>
+                            <p class="way-card-desc">
+                                Reach the right talent across our network. Get quality applications faster with AI-powered visibility.
+                            </p>
+                            <div class="way-checklist">
+                                <div class="way-check-item">
+                                    <div class="way-check-icon"><i class="fa-solid fa-check"></i></div>
+                                    <span>Create jobs in minutes</span>
+                                </div>
+                                <div class="way-check-item">
+                                    <div class="way-check-icon"><i class="fa-solid fa-check"></i></div>
+                                    <span>Reach active & passive candidates</span>
+                                </div>
+                                <div class="way-check-item">
+                                    <div class="way-check-icon"><i class="fa-solid fa-check"></i></div>
+                                    <span>Get smarter matches with AI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Source / Proactive Talent Search -->
+                    <div class="way-card">
+                        <div class="way-card-top">
+                            <div class="way-num-badge">02</div>
+                            <div class="way-stage-badge">SOURCE</div>
+                        </div>
+
+                        <div class="way-card-content">
+                            <h3 class="way-card-title">Proactive<br>Talent Search</h3>
+                            <p class="way-card-desc">
+                                Use AI to search and discover pre-screened candidates from our growing talent pool and partner networks.
+                            </p>
+                            <div class="way-checklist">
+                                <div class="way-check-item">
+                                    <div class="way-check-icon"><i class="fa-solid fa-check"></i></div>
+                                    <span>Search by skills, location, experience</span>
+                                </div>
+                                <div class="way-check-item">
+                                    <div class="way-check-icon"><i class="fa-solid fa-check"></i></div>
+                                    <span>Access verified, ready-to-join talent</span>
+                                </div>
+                                <div class="way-check-item">
+                                    <div class="way-check-icon"><i class="fa-solid fa-check"></i></div>
+                                    <span>Save time with AI recommendations</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Engage / Autopilot Recruiter -->
+                    <div class="way-card">
+                        <div class="way-card-top">
+                            <div class="way-num-badge">03</div>
+                            <div class="way-stage-badge">ENGAGE</div>
+                        </div>
+
+                        <div class="way-card-content">
+                            <h3 class="way-card-title">Autopilot<br>Recruiter</h3>
+                            <p class="way-card-desc">
+                                Let our AI recruiter work for you. It finds, screens, and shortlists the best candidates &mdash; and delivers 5&ndash;10 ready-to-talk profiles every week.
+                            </p>
+                            <div class="way-checklist">
+                                <div class="way-check-item">
+                                    <div class="way-check-icon"><i class="fa-solid fa-check"></i></div>
+                                    <span>AI screens candidates as per your JD</span>
+                                </div>
+                                <div class="way-check-item">
+                                    <div class="way-check-icon"><i class="fa-solid fa-check"></i></div>
+                                    <span>Get 5&ndash;10 handpicked profiles weekly</span>
+                                </div>
+                                <div class="way-check-item">
+                                    <div class="way-check-icon"><i class="fa-solid fa-check"></i></div>
+                                    <span>Focus only on interviews, not manual hunting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 4: SUCCESS STORIES (REAL PEOPLE. REAL GROWTH.)
+         ========================================================================== -->
+    <section class="stories-section" id="success-stories">
+        <!-- Vectorized Background Graphics System -->
+        <div class="stories-bg-graphics">
+            <!-- Tech Grid -->
+            <div class="stories-bg-grid"></div>
+
+            <!-- Ambient Vector Waves -->
+            <svg class="stories-bg-waves" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M-100,200 C300,50 600,350 1100,120 L1650,220 L1650,-100 L-100,-100 Z" fill="url(#storiesWave1)" opacity="0.32"/>
+                <path d="M-100,750 C400,600 800,850 1300,650 L1700,780 L1700,950 L-100,950 Z" fill="url(#storiesWave2)" opacity="0.25"/>
+                <defs>
+                    <linearGradient id="storiesWave1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#bfdbfe"/>
+                        <stop offset="100%" stop-color="#eff6ff"/>
+                    </linearGradient>
+                    <linearGradient id="storiesWave2" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#bfdbfe"/>
+                        <stop offset="100%" stop-color="#dbeafe"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="stories-container">
+            <!-- Section Header -->
+            <div class="stories-header">
+                <!-- Handwritten Accent Notes -->
+                <div class="hw-note-story hw-story-left">
+                    Different<br>Skills<br>Same Dreams
+                    <svg class="hw-stroke" viewBox="0 0 90 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 8 C30 2, 65 10, 88 3" stroke="#0052ff" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <div class="hw-note-story hw-story-right">
+                    People<br>Skills<br>Opportunities<br>Growth
+                    <svg class="hw-stroke" viewBox="0 0 95 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 9 C35 2, 70 10, 93 4" stroke="#0052ff" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <div class="stories-eyebrow-wrap">
+                    <span class="stories-eyebrow-line"></span>
+                    <span class="stories-eyebrow">SUCCESS STORIES</span>
+                    <span class="stories-eyebrow-line"></span>
+                </div>
+
+                <h2 class="stories-title">
+                    Real people. <span class="highlight-blue-italic">Real growth.</span>
+                </h2>
+
+                <p class="stories-subtitle">
+                    Thousands of job seekers have found better opportunities, faster careers and brighter futures with WorkLinkAI. Here are a few of their stories.
+                </p>
+            </div>
+
+            <!-- 4 Cards Grid -->
+            <div class="stories-grid">
+
+        <div class="story-card">
+            <div class="story-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="story-quote-text">“I was struggling to get interviews despite having the right skills. WorkLinkAI’s Smart Card got me noticed, and I received 5 interview calls within 2 weeks!”</p>
+            <div class="story-card-footer">
+                <div class="story-user-meta">
+                    <h4 class="story-user-name">Priya Mehta</h4>
+                    <p class="story-user-role">Software Engineer</p>
+                    <div class="story-company-row">
+                        <img src="logo_tcs.svg" alt="TCS" class="story-company-logo" style="">
+                        <div class="story-company-info">
+                            <span class="story-company-name">TCS</span>
+                            <span class="story-location"><i class="fa-solid fa-location-dot"></i> Bengaluru, Karnataka</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-skills">
+                    <span class="story-skill-tag">React</span><span class="story-skill-tag">Node.js</span><span class="story-skill-tag">Problem Solving</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="story-card">
+            <div class="story-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="story-quote-text">“I love how simple the platform is. I updated my profile once and started getting relevant job recommendations. Landed a 40% higher offer than my previous job!”</p>
+            <div class="story-card-footer">
+                <div class="story-user-meta">
+                    <h4 class="story-user-name">Rahul Sharma</h4>
+                    <p class="story-user-role">Data Analyst</p>
+                    <div class="story-company-row">
+                        <img src="logo_microsoft.svg" alt="Microsoft" class="story-company-logo" style="">
+                        <div class="story-company-info">
+                            <span class="story-company-name">Microsoft</span>
+                            <span class="story-location"><i class="fa-solid fa-location-dot"></i> Hyderabad, Telangana</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-skills">
+                    <span class="story-skill-tag">SQL</span><span class="story-skill-tag">Python</span><span class="story-skill-tag">Data Visualization</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="story-card">
+            <div class="story-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="story-quote-text">“I switched from a non-tech background to a Product Designer role with the help of WorkLinkAI. The AI suggestions and skill insights really helped me prepare.”</p>
+            <div class="story-card-footer">
+                <div class="story-user-meta">
+                    <h4 class="story-user-name">Sneha Iyer</h4>
+                    <p class="story-user-role">Product Designer</p>
+                    <div class="story-company-row">
+                        <img src="logo_zoho.svg" alt="Zoho" class="story-company-logo" style="width: 32px;">
+                        <div class="story-company-info">
+                            <span class="story-company-name">Zoho</span>
+                            <span class="story-location"><i class="fa-solid fa-location-dot"></i> Chennai, Tamil Nadu</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-skills">
+                    <span class="story-skill-tag">Figma</span><span class="story-skill-tag">UI/UX</span><span class="story-skill-tag">User Research</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="story-card">
+            <div class="story-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="story-quote-text">“As a fresher, I was unsure where to start. WorkLinkAI made it easy with a single profile and relevant job matches. I got my first job within 1 month!”</p>
+            <div class="story-card-footer">
+                <div class="story-user-meta">
+                    <h4 class="story-user-name">Arjun Nair</h4>
+                    <p class="story-user-role">Operations Executive</p>
+                    <div class="story-company-row">
+                        <img src="logo_flipkart.svg" alt="Flipkart" class="story-company-logo" style="">
+                        <div class="story-company-info">
+                            <span class="story-company-name">Flipkart</span>
+                            <span class="story-location"><i class="fa-solid fa-location-dot"></i> Bengaluru, Karnataka</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-skills">
+                    <span class="story-skill-tag">Operations</span><span class="story-skill-tag">Communication</span><span class="story-skill-tag">Excel</span>
+                </div>
+            </div>
+        </div>
+        
+            </div>
+        </div>
+    </section>
+
+<footer id="footer" class="footer-section">
+        <!-- Minimal Vector Background Matching Platform Theme -->
+        <div class="bg-graphics-footer" aria-hidden="true">
+            <svg class="bg-vector-footer" viewBox="0 0 1600 520" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <!-- Concentric Circular Arcs (Bottom Right Corner) -->
+                <circle cx="1520" cy="420" r="260" stroke="url(#footerArcGrad1)" stroke-width="18" opacity="0.14"/>
+                <circle cx="1520" cy="420" r="170" stroke="url(#footerArcGrad2)" stroke-width="10" opacity="0.12"/>
+                <circle cx="1520" cy="420" r="90" fill="url(#footerBlobGrad)" opacity="0.14"/>
+
+                <!-- Delicate Concentric Arcs (Top Left Corner) -->
+                <circle cx="60" cy="40" r="160" stroke="url(#footerArcGrad2)" stroke-width="12" opacity="0.12"/>
+                <circle cx="60" cy="40" r="90" stroke="url(#footerArcGrad1)" stroke-width="6" stroke-dasharray="4 6" opacity="0.15"/>
+
+                <!-- Elegant Flowing Top Accent Lines -->
+                <path d="M0,60 C360,110 680,25 1040,75 C1320,115 1480,45 1600,65" stroke="url(#footerArcGrad1)" stroke-width="1.5" opacity="0.38" fill="none"/>
+                <path d="M-40,95 C320,155 720,55 1100,105 C1360,135 1500,65 1640,90" stroke="url(#footerArcGrad2)" stroke-width="1.2" stroke-dasharray="6 8" opacity="0.32" fill="none"/>
+
+                <!-- Subtle Grounding Bottom Wave -->
+                <path d="M0,455 C380,415 760,470 1140,435 C1360,415 1490,455 1600,440 L1600,520 L0,520 Z" fill="url(#footerBottomWave)" opacity="0.22"/>
+
+                <!-- Minimal Accent Dot Grid (Left & Right) -->
+                <g opacity="0.22">
+                    <circle cx="80" cy="200" r="2" fill="#3b82f6"/>
+                    <circle cx="105" cy="200" r="2" fill="#3b82f6"/>
+                    <circle cx="130" cy="200" r="2" fill="#3b82f6"/>
+                    <circle cx="80" cy="225" r="2" fill="#3b82f6"/>
+                    <circle cx="105" cy="225" r="2" fill="#3b82f6"/>
+                    <circle cx="130" cy="225" r="2" fill="#3b82f6"/>
+                    <circle cx="80" cy="250" r="2" fill="#3b82f6"/>
+                    <circle cx="105" cy="250" r="2" fill="#3b82f6"/>
+                    <circle cx="130" cy="250" r="2" fill="#3b82f6"/>
+
+                    <circle cx="1470" cy="110" r="2" fill="#3b82f6"/>
+                    <circle cx="1495" cy="110" r="2" fill="#3b82f6"/>
+                    <circle cx="1520" cy="110" r="2" fill="#3b82f6"/>
+                    <circle cx="1470" cy="135" r="2" fill="#3b82f6"/>
+                    <circle cx="1495" cy="135" r="2" fill="#3b82f6"/>
+                    <circle cx="1520" cy="135" r="2" fill="#3b82f6"/>
+                    <circle cx="1470" cy="160" r="2" fill="#3b82f6"/>
+                    <circle cx="1495" cy="160" r="2" fill="#3b82f6"/>
+                    <circle cx="1520" cy="160" r="2" fill="#3b82f6"/>
+                </g>
+
+                <defs>
+                    <linearGradient id="footerArcGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.6"/>
+                        <stop offset="100%" stop-color="#93c5fd" stop-opacity="0.1"/>
+                    </linearGradient>
+                    <linearGradient id="footerArcGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.5"/>
+                        <stop offset="100%" stop-color="#bfdbfe" stop-opacity="0.1"/>
+                    </linearGradient>
+                    <linearGradient id="footerBottomWave" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#bfdbfe" stop-opacity="0.5"/>
+                        <stop offset="50%" stop-color="#93c5fd" stop-opacity="0.4"/>
+                        <stop offset="100%" stop-color="#dbeafe" stop-opacity="0.5"/>
+                    </linearGradient>
+                    <radialGradient id="footerBlobGrad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#dbeafe" stop-opacity="0.6"/>
+                        <stop offset="100%" stop-color="#eff6ff" stop-opacity="0"/>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+        <!-- Ambient Background Glow -->
+        <div class="footer-bg-glow" aria-hidden="true"></div>
+
+        <div class="footer-container">
+            
+            <!-- UPPER CTA BLOCK -->
+            <div class="footer-cta-block">
+                <h2 class="footer-cta-title">
+                    What's <span class="footer-title-accent">your next move?</span>
+                </h2>
+                <p class="footer-cta-subtitle">
+                    The right job, or the right hire. Both start here.
+                </p>
+                <div class="footer-cta-buttons">
+                    <a href="#" class="btn-footer-primary">
+                        <span>Sign up to find a job &rarr;</span>
+                    </a>
+                    <a href="employer.html" class="btn-footer-secondary">
+                        <span>Start hiring</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- HORIZONTAL DIVIDER -->
+            <div class="footer-divider"></div>
+
+            <!-- LOWER 5-COLUMN NAVIGATION GRID -->
+            <div class="footer-nav-grid">
+                
+                <!-- Column 1: Brand Info -->
+                <div class="footer-col footer-col-brand">
+                    <div class="footer-logo">
+                        LoremIpsum<span class="logo-accent">:</span>
+                    </div>
+                    <p class="footer-brand-desc">
+                        LoremIpsum is the AI recruiting platform and talent marketplace for startups. Post jobs, source candidates with AI agents, or partner with a dedicated recruiter.
+                    </p>
+                    <div class="footer-social-links">
+                        <a href="#" class="footer-social-tag" aria-label="LinkedIn">in</a>
+                        <a href="#" class="footer-social-tag" aria-label="X (formerly Twitter)">X</a>
+                        <a href="#" class="footer-social-tag" aria-label="Instagram">ig</a>
+                        <a href="#" class="footer-social-tag" aria-label="YouTube">yt</a>
+                    </div>
+                </div>
+
+                <!-- Column 2: FOR COMPANIES -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">FOR COMPANIES</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="employer.html">Post a job</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: FOR CANDIDATES -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">FOR CANDIDATES</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#">Candidate overview</a></li>
+                        <li><a href="#">Startup jobs</a></li>
+                        <li><a href="#">Remote jobs</a></li>
+                        <li><a href="#">Remote work guide</a></li>
+                        <li><a href="#">Get discovered</a></li>
+                        <li><a href="#">Salary calculator</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: COMPANY -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">COMPANY</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#">About LoremIpsum</a></li>
+                        <li><a href="#">Customer stories</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: TRUST & SUPPORT -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">TRUST & SUPPORT</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#">Help center</a></li>
+                        <li><a href="#">Trust center</a></li>
+                        <li><a href="#">AI audit center</a></li>
+                        <li><a href="#">Platform status</a></li>
+                        <li><a href="#">Privacy & cookies</a></li>
+                        <li><a href="#">Cookie Preferences</a></li>
+                        <li><a href="#">Terms & risks</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- COPYRIGHT BAR -->
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 LoremIpsum. All rights reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>

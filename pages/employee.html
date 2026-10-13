@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Opportunities - JobPortal</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="employee-header">
+        <div class="employee-logo">LoremIpsum<span>:</span></div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="employer.html">For Employer</a>
+        </nav>
+    </header>
+
+    <section class="employee-hero">
+        <p>YOUR NEXT CAREER STARTS HERE</p>
+        <h1>Find the right job.<br><span>Build your future.</span></h1>
+        <p>Discover opportunities that match your skills, interests and career goals.</p>
+
+        <form class="job-search" id="jobSearchForm">
+            <input id="jobKeyword" type="search" placeholder="Job title or skills">
+            <input id="jobLocation" type="search" placeholder="City or location">
+            <button type="submit">Search Jobs</button>
+        </form>
+    </section>
+
+    <main class="employee-section">
+        <h2>Explore Opportunities</h2>
+        <p>Start exploring roles that fit your career goals.</p>
+
+        <div class="job-card">
+            <h3>Software Developer</h3>
+            <p>Technology · Full-time · Entry level</p>
+            <p>Work on software applications and collaborate with a development team.</p>
+            <a class="employee-button" href="mailto:careers@example.com?subject=Software%20Developer%20Application">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+            <h3>Data Analyst</h3>
+            <p>Analytics · Full-time · Junior</p>
+            <p>Help transform data into useful insights for business decisions.</p>
+            <a class="employee-button" href="mailto:careers@example.com?subject=Data%20Analyst%20Application">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+            <h3>Web Designer</h3>
+            <p>Design · Full-time · Entry level</p>
+            <p>Create clear, accessible and user-friendly website experiences.</p>
+            <a class="employee-button" href="mailto:careers@example.com?subject=Web%20Designer%20Application">Apply Now</a>
+        </div>
+
+        <p id="searchMessage" role="status"></p>
+    </main>
+
+    <footer class="employee-footer">
+        <p>© 2026 LoremIpsum. All rights reserved.</p>
+        <p>Find opportunities. Build your future.</p>
+    </footer>
+
+    <script>
+        const searchForm = document.getElementById("jobSearchForm");
+        const jobCards = document.querySelectorAll(".job-card");
+        const searchMessage = document.getElementById("searchMessage");
+
+        searchForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const keyword = document.getElementById("jobKeyword").value.trim().toLowerCase();
+            const location = document.getElementById("jobLocation").value.trim().toLowerCase();
+            let matches = 0;
+
+            jobCards.forEach(function(card) {
+                const text = card.textContent.toLowerCase();
+                const matchesKeyword = !keyword || text.includes(keyword);
+                const matchesLocation = !location || text.includes(location);
+
+                const show = matchesKeyword && matchesLocation;
+                card.hidden = !show;
+                if (show) matches++;
+            });
+
+            searchMessage.textContent = matches
+                ? matches + " sample job(s) found."
+                : "No matching sample jobs found. Try different search terms.";
+        });
+    </script>
+</body>
+</html>
