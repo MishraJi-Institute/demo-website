@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Opportunities - JobPortal</title>
+    <meta name="description" content="Explore sample job opportunities and discover career tools on JobPortal.">
+    <title>Find Opportunities | JobPortal</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header class="employee-header">
-        <div class="employee-logo">LoremIpsum<span>:</span></div>
-        <nav>
+        <a class="employee-logo" href="../index.html">JobPortal<span>:</span></a>
+        <nav aria-label="Main navigation">
             <a href="../index.html">Home</a>
-            <a href="employer.html">For Employer</a>
+        <a href="employer.html">For Employers</a>
+        <a href="../pricing.html">Pricing</a>
         </nav>
     </header>
 
@@ -20,43 +22,43 @@
         <h1>Find the right job.<br><span>Build your future.</span></h1>
         <p>Discover opportunities that match your skills, interests and career goals.</p>
 
-        <form class="job-search" id="jobSearchForm">
-            <input id="jobKeyword" type="search" placeholder="Job title or skills">
-            <input id="jobLocation" type="search" placeholder="City or location">
+        <form class="job-search" id="jobSearchForm" role="search">
+            <input id="jobKeyword" type="search" aria-label="Job title or skills" placeholder="Job title or skills">
+            <input id="jobLocation" type="search" aria-label="City or location" placeholder="City or location">
             <button type="submit">Search Jobs</button>
         </form>
     </section>
 
-    <main class="employee-section">
+    <main class="employee-section" id="opportunities">
         <h2>Explore Opportunities</h2>
         <p>Start exploring roles that fit your career goals.</p>
 
         <div class="job-card">
             <h3>Software Developer</h3>
-            <p>Technology · Full-time · Entry level</p>
+            <p>Technology · Full-time · Entry level · Bengaluru</p>
             <p>Work on software applications and collaborate with a development team.</p>
-            <a class="employee-button" href="mailto:careers@example.com?subject=Software%20Developer%20Application">Apply Now</a>
+            <a class="employee-button" href="../index.html#for-job-seekers">Build my profile</a>
         </div>
 
         <div class="job-card">
             <h3>Data Analyst</h3>
-            <p>Analytics · Full-time · Junior</p>
+            <p>Analytics · Full-time · Junior · Hyderabad</p>
             <p>Help transform data into useful insights for business decisions.</p>
-            <a class="employee-button" href="mailto:careers@example.com?subject=Data%20Analyst%20Application">Apply Now</a>
+            <a class="employee-button" href="../index.html#for-job-seekers">Build my profile</a>
         </div>
 
         <div class="job-card">
             <h3>Web Designer</h3>
-            <p>Design · Full-time · Entry level</p>
+            <p>Design · Full-time · Entry level · Pune</p>
             <p>Create clear, accessible and user-friendly website experiences.</p>
-            <a class="employee-button" href="mailto:careers@example.com?subject=Web%20Designer%20Application">Apply Now</a>
+            <a class="employee-button" href="../index.html#for-job-seekers">Build my profile</a>
         </div>
 
         <p id="searchMessage" role="status"></p>
     </main>
 
     <footer class="employee-footer">
-        <p>© 2026 LoremIpsum. All rights reserved.</p>
+        <p>© 2026 JobPortal. All rights reserved.</p>
         <p>Find opportunities. Build your future.</p>
     </footer>
 

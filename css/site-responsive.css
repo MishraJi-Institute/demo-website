@@ -1,0 +1,316 @@
+@media (max-width: 1100px) {
+  .hero-visual {
+    overflow: hidden;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats-grid > div {
+    min-width: 0;
+    grid-template-columns: minmax(0, 24px) minmax(0, 1fr);
+  }
+
+  .stats-grid b,
+  .stats-grid small {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .pricing-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 14px 20px;
+    padding: 14px 5%;
+  }
+
+  .pricing-header > .brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .pricing-header > .header-actions {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .pricing-header > .main-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 24px;
+    overflow: visible;
+  }
+
+  .pricing-header .main-nav a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 760px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    height: auto;
+    min-height: 68px;
+    padding: 12px 5%;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .site-header .brand {
+    gap: 8px;
+    font-size: 18px;
+  }
+
+  .site-header .brand-mark {
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    min-height: 42px;
+    margin-left: auto;
+    border: 1px solid #dce6f5;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #14213d;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .site-header .main-nav {
+    display: none;
+    order: 3;
+    flex: 1 0 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 0;
+    border-top: 1px solid #e8eef7;
+  }
+
+  .site-header .main-nav.is-open {
+    display: flex;
+  }
+
+  .site-header .main-nav a {
+    padding: 11px 2px;
+    border-bottom: 1px solid #eef2f8;
+  }
+
+  .site-header .header-actions {
+    order: 4;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .site-header .header-actions .button-small {
+    flex: 1;
+    padding: 0 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .site-header .header-actions .login {
+    padding: 10px 13px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .hero {
+    width: 90%;
+    min-height: 0;
+    padding: 48px 0 40px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .hero-copy {
+    padding: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 10.5vw, 60px);
+    letter-spacing: -2.4px;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-visual {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 24px;
+  }
+
+  .workflow {
+    top: 12px;
+    padding: 0 5px;
+  }
+
+  .workflow > div {
+    min-width: 64px;
+  }
+
+  .workflow i {
+    width: 42px;
+    height: 42px;
+    font-size: 15px;
+  }
+
+  .workflow small {
+    max-width: 72px;
+    font-size: 8px;
+  }
+
+  .side-profile,
+  .floating-tag,
+  .visual-note {
+    display: none;
+  }
+
+  .candidate-card {
+    top: 52%;
+    left: 7%;
+    width: 86%;
+    min-height: 0;
+    padding: 17px 16px 0;
+    transform: translateY(-25%);
+  }
+
+  .candidate-meta {
+    gap: 10px;
+    font-size: 8px;
+  }
+
+  .candidate-details {
+    gap: 8px;
+    font-size: 8px;
+  }
+
+  .candidate-details strong {
+    font-size: 9px;
+  }
+
+  .card-footer {
+    margin: 0 -16px;
+    padding: 12px 15px;
+  }
+
+  .brief-section,
+  .talent-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .brief-section {
+    padding: 58px 0;
+  }
+
+  .brief-demo {
+    min-width: 0;
+    padding: 20px 16px 26px;
+  }
+
+  .demo-heading {
+    flex-direction: column;
+  }
+
+  .steps {
+    width: 100%;
+  }
+
+  .steps small {
+    width: 54px;
+  }
+
+  .form-preview {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .talent-section {
+    padding: 52px 0;
+  }
+
+  .india-visual {
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+  }
+
+  .benefits {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .cta-section {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 42px 0;
+  }
+
+  body > footer {
+    margin: 0;
+    padding: 22px 5%;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 12px;
+  }
+
+  .pricing-header {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 12px;
+    padding: 14px 5%;
+  }
+
+  .pricing-header > .brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .pricing-header > .header-actions {
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: center;
+  }
+
+  .pricing-header > .main-nav {
+    grid-column: 1;
+    grid-row: 3;
+    gap: 6px 18px;
+  }
+
+  .pricing-header .main-nav a {
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .candidate-card {
+    left: 4%;
+    width: 92%;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .card-footer {
+    margin-right: -12px;
+    margin-left: -12px;
+  }
+
+}

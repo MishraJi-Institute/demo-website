@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Employer - Hire the Best Talent</title>
+    <title>For Employers | JobPortal</title>
     <!-- Fonts: Manrope & Caveat matching index.html -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -515,8 +515,13 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            object-fit: cover;
             display: block;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, #c7ddff, #4f7fe8);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 800;
         }
 
         .status-dot-green {
@@ -2066,10 +2071,15 @@
         }
 
         .story-company-logo {
+            width: 34px;
             height: 25px;
-            width: auto;
-            max-width: 44px;
-            object-fit: contain;
+            display: grid;
+            place-items: center;
+            border-radius: 5px;
+            background: #eef4ff;
+            color: #2155b8;
+            font-size: 8px;
+            font-weight: 800;
             flex-shrink: 0;
         }
 
@@ -2156,18 +2166,18 @@
     <header class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <a href="index.html">LoremIpsum<span class="logo-accent">:</span></a>
+                <a href="../index.html">JobPortal<span class="logo-accent">:</span></a>
             </div>
             <nav class="nav-links">
-                <a href="For_Employeer.html" class="active">Overview</a>
-                <a href="Post_A_Job.html">Post a job</a>
-                <a href="#">Pricing</a>
+                <a href="employer.html" class="active">Overview</a>
+                <a href="../posting-job.html">Post a job</a>
+                <a href="../pricing.html">Pricing</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="ov-hero">
+    <section class="ov-hero" id="overview">
         <!-- Aesthetic Minimal Background System -->
         <div class="ov-bg-graphics">
             <div class="ov-bg-blob ov-blob-1"></div>
@@ -2255,8 +2265,8 @@
 
                     <!-- CTAs -->
                     <div class="ov-cta-row">
-                        <a href="#" class="ov-btn-primary">Find your next candidate <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="Post_A_Job.html" class="ov-btn-secondary">Post a job</a>
+                        <a href="../posting-job.html#talent" class="ov-btn-primary">Find your next candidate <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="../posting-job.html" class="ov-btn-secondary">Post a job</a>
                     </div>
                     <div class="ov-trust-text">
                         <i class="fa-solid fa-star"></i> Trusted by 2,500+ companies across India
@@ -2311,7 +2321,7 @@
                             <!-- Candidate 1 -->
                             <div class="candidate-card cand-card-1">
                                 <div class="avatar-wrapper">
-                                    <img src="avatar_rahul.png" alt="Rahul Mehta" class="cand-avatar">
+                                    <div class="cand-avatar" aria-hidden="true">RM</div>
                                     <span class="status-dot-green"></span>
                                 </div>
                                 <div class="cand-info">
@@ -2332,7 +2342,7 @@
                             <!-- Candidate 2 -->
                             <div class="candidate-card cand-card-2">
                                 <div class="avatar-wrapper">
-                                    <img src="avatar_priya.png" alt="Priya Sharma" class="cand-avatar">
+                                    <div class="cand-avatar" aria-hidden="true">PS</div>
                                 </div>
                                 <div class="cand-info">
                                     <h4>Priya Sharma</h4>
@@ -2352,7 +2362,7 @@
                             <!-- Candidate 3 -->
                             <div class="candidate-card cand-card-3">
                                 <div class="avatar-wrapper">
-                                    <img src="avatar_amit.png" alt="Amit Verma" class="cand-avatar">
+                                    <div class="cand-avatar" aria-hidden="true">AV</div>
                                 </div>
                                 <div class="cand-info">
                                     <h4>Amit Verma</h4>
@@ -2493,10 +2503,10 @@
                         Create a job listing in minutes and reach a diverse pool of qualified candidates. Our AI helps your job get in front of the right people &mdash; so you can hire faster and focus on what matters.
                     </p>
                     <div class="emp-dash-actions">
-                        <a href="Post_A_Job.html" class="btn-dash-primary">
+                        <a href="../posting-job.html" class="btn-dash-primary">
                             Post a job for free <span class="btn-arrow">&rarr;</span>
                         </a>
-                        <a href="#" class="btn-dash-secondary">View pricing</a>
+                        <a href="../pricing.html" class="btn-dash-secondary">View pricing</a>
                     </div>
                     <div class="emp-dash-footnote">No credit card required. Unlimited job listings.</div>
                 </div>
@@ -2508,7 +2518,7 @@
                         <!-- Topbar Panel (Non-functional showpiece) -->
                         <div class="dash-topbar-panel">
                             <div class="dash-topbar-brand-nav">
-                                <span class="dash-topbar-brand">LoremIpsum<span class="dash-brand-accent">:</span></span>
+                                <span class="dash-topbar-brand">JobPortal<span class="dash-brand-accent">:</span></span>
                                 <div class="dash-topbar-nav">
                                     <span class="active">Jobs</span>
                                     <span>Candidates</span>
@@ -2907,7 +2917,7 @@
                 </h2>
 
                 <p class="stories-subtitle">
-                    Thousands of job seekers have found better opportunities, faster careers and brighter futures with WorkLinkAI. Here are a few of their stories.
+                    Professionals use JobPortal to discover relevant opportunities and build brighter futures.
                 </p>
             </div>
 
@@ -2916,13 +2926,13 @@
 
         <div class="story-card">
             <div class="story-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
-            <p class="story-quote-text">“I was struggling to get interviews despite having the right skills. WorkLinkAI’s Smart Card got me noticed, and I received 5 interview calls within 2 weeks!”</p>
+            <p class="story-quote-text">“I was struggling to get interviews despite having the right skills. My profile helped me get noticed and start meaningful conversations.”</p>
             <div class="story-card-footer">
                 <div class="story-user-meta">
                     <h4 class="story-user-name">Priya Mehta</h4>
                     <p class="story-user-role">Software Engineer</p>
                     <div class="story-company-row">
-                        <img src="logo_tcs.svg" alt="TCS" class="story-company-logo" style="">
+                        <span class="story-company-logo" aria-hidden="true">TCS</span>
                         <div class="story-company-info">
                             <span class="story-company-name">TCS</span>
                             <span class="story-location"><i class="fa-solid fa-location-dot"></i> Bengaluru, Karnataka</span>
@@ -2943,7 +2953,7 @@
                     <h4 class="story-user-name">Rahul Sharma</h4>
                     <p class="story-user-role">Data Analyst</p>
                     <div class="story-company-row">
-                        <img src="logo_microsoft.svg" alt="Microsoft" class="story-company-logo" style="">
+                        <span class="story-company-logo" aria-hidden="true">MS</span>
                         <div class="story-company-info">
                             <span class="story-company-name">Microsoft</span>
                             <span class="story-location"><i class="fa-solid fa-location-dot"></i> Hyderabad, Telangana</span>
@@ -2958,13 +2968,13 @@
         
         <div class="story-card">
             <div class="story-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
-            <p class="story-quote-text">“I switched from a non-tech background to a Product Designer role with the help of WorkLinkAI. The AI suggestions and skill insights really helped me prepare.”</p>
+            <p class="story-quote-text">“I switched from a non-tech background to a Product Designer role. The skills-first profile helped me show what I could do.”</p>
             <div class="story-card-footer">
                 <div class="story-user-meta">
                     <h4 class="story-user-name">Sneha Iyer</h4>
                     <p class="story-user-role">Product Designer</p>
                     <div class="story-company-row">
-                        <img src="logo_zoho.svg" alt="Zoho" class="story-company-logo" style="width: 32px;">
+                        <span class="story-company-logo" aria-hidden="true">Z</span>
                         <div class="story-company-info">
                             <span class="story-company-name">Zoho</span>
                             <span class="story-location"><i class="fa-solid fa-location-dot"></i> Chennai, Tamil Nadu</span>
@@ -2979,13 +2989,13 @@
         
         <div class="story-card">
             <div class="story-quote-mark"><i class="fa-solid fa-quote-left"></i></div>
-            <p class="story-quote-text">“As a fresher, I was unsure where to start. WorkLinkAI made it easy with a single profile and relevant job matches. I got my first job within 1 month!”</p>
+            <p class="story-quote-text">“As a fresher, I was unsure where to start. A clear profile and relevant opportunities helped me take my first career step.”</p>
             <div class="story-card-footer">
                 <div class="story-user-meta">
                     <h4 class="story-user-name">Arjun Nair</h4>
                     <p class="story-user-role">Operations Executive</p>
                     <div class="story-company-row">
-                        <img src="logo_flipkart.svg" alt="Flipkart" class="story-company-logo" style="">
+                        <span class="story-company-logo" aria-hidden="true">F</span>
                         <div class="story-company-info">
                             <span class="story-company-name">Flipkart</span>
                             <span class="story-location"><i class="fa-solid fa-location-dot"></i> Bengaluru, Karnataka</span>
@@ -3080,10 +3090,10 @@
                     The right job, or the right hire. Both start here.
                 </p>
                 <div class="footer-cta-buttons">
-                    <a href="#" class="btn-footer-primary">
+                    <a href="../pages/employee.html" class="btn-footer-primary">
                         <span>Sign up to find a job &rarr;</span>
                     </a>
-                    <a href="employer.html" class="btn-footer-secondary">
+                    <a href="../posting-job.html" class="btn-footer-secondary">
                         <span>Start hiring</span>
                     </a>
                 </div>
@@ -3098,16 +3108,16 @@
                 <!-- Column 1: Brand Info -->
                 <div class="footer-col footer-col-brand">
                     <div class="footer-logo">
-                        LoremIpsum<span class="logo-accent">:</span>
+                        JobPortal<span class="logo-accent">:</span>
                     </div>
                     <p class="footer-brand-desc">
-                        LoremIpsum is the AI recruiting platform and talent marketplace for startups. Post jobs, source candidates with AI agents, or partner with a dedicated recruiter.
+                        JobPortal connects employers and professionals with thoughtful, AI-assisted hiring tools.
                     </p>
                     <div class="footer-social-links">
-                        <a href="#" class="footer-social-tag" aria-label="LinkedIn">in</a>
-                        <a href="#" class="footer-social-tag" aria-label="X (formerly Twitter)">X</a>
-                        <a href="#" class="footer-social-tag" aria-label="Instagram">ig</a>
-                        <a href="#" class="footer-social-tag" aria-label="YouTube">yt</a>
+                        <span class="footer-social-tag" aria-label="LinkedIn">in</span>
+                        <span class="footer-social-tag" aria-label="X (formerly Twitter)">X</span>
+                        <span class="footer-social-tag" aria-label="Instagram">ig</span>
+                        <span class="footer-social-tag" aria-label="YouTube">yt</span>
                     </div>
                 </div>
 
@@ -3115,9 +3125,9 @@
                 <div class="footer-col">
                     <h4 class="footer-col-title">FOR COMPANIES</h4>
                     <ul class="footer-links-list">
-                        <li><a href="#">Overview</a></li>
-                        <li><a href="employer.html">Post a job</a></li>
-                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="../posting-job.html">Post a job</a></li>
+                        <li><a href="../pricing.html">Pricing</a></li>
                     </ul>
                 </div>
 
@@ -3125,12 +3135,12 @@
                 <div class="footer-col">
                     <h4 class="footer-col-title">FOR CANDIDATES</h4>
                     <ul class="footer-links-list">
-                        <li><a href="#">Candidate overview</a></li>
-                        <li><a href="#">Startup jobs</a></li>
-                        <li><a href="#">Remote jobs</a></li>
-                        <li><a href="#">Remote work guide</a></li>
-                        <li><a href="#">Get discovered</a></li>
-                        <li><a href="#">Salary calculator</a></li>
+                        <li><a href="../pages/employee.html">Candidate overview</a></li>
+                        <li><a href="../pages/employee.html#opportunities">Startup jobs</a></li>
+                        <li><a href="../pages/employee.html#opportunities">Remote jobs</a></li>
+                        <li><a href="../pages/employee.html#opportunities">Remote work guide</a></li>
+                        <li><a href="../pages/employee.html">Get discovered</a></li>
+                        <li><a href="../pages/employee.html#opportunities">Salary calculator</a></li>
                     </ul>
                 </div>
 
@@ -3138,11 +3148,11 @@
                 <div class="footer-col">
                     <h4 class="footer-col-title">COMPANY</h4>
                     <ul class="footer-links-list">
-                        <li><a href="#">About LoremIpsum</a></li>
-                        <li><a href="#">Customer stories</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="../index.html#faq">About JobPortal</a></li>
+                        <li><a href="../index.html#success-stories">Customer stories</a></li>
+                        <li><a href="../index.html#faq">Blog</a></li>
+                        <li><a href="../pages/employee.html">Careers</a></li>
+                        <li><a href="../index.html#faq">Contact</a></li>
                     </ul>
                 </div>
 
@@ -3150,13 +3160,13 @@
                 <div class="footer-col">
                     <h4 class="footer-col-title">TRUST & SUPPORT</h4>
                     <ul class="footer-links-list">
-                        <li><a href="#">Help center</a></li>
-                        <li><a href="#">Trust center</a></li>
-                        <li><a href="#">AI audit center</a></li>
-                        <li><a href="#">Platform status</a></li>
-                        <li><a href="#">Privacy & cookies</a></li>
-                        <li><a href="#">Cookie Preferences</a></li>
-                        <li><a href="#">Terms & risks</a></li>
+                        <li><a href="../index.html#faq">Help center</a></li>
+                        <li><a href="../index.html#faq">Trust center</a></li>
+                        <li><a href="../index.html#faq">AI audit center</a></li>
+                        <li><a href="../index.html#faq">Platform status</a></li>
+                        <li><a href="../index.html#faq">Privacy & cookies</a></li>
+                        <li><a href="../index.html#faq">Cookie Preferences</a></li>
+                        <li><a href="../index.html#faq">Terms & risks</a></li>
                     </ul>
                 </div>
 
@@ -3164,7 +3174,7 @@
 
             <!-- COPYRIGHT BAR -->
             <div class="footer-bottom-bar">
-                <p>&copy; 2026 LoremIpsum. All rights reserved.</p>
+                <p>&copy; 2026 JobPortal. All rights reserved.</p>
             </div>
 
         </div>

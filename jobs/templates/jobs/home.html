@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -759,8 +760,184 @@
                 border-right: none;
             }
         }
+/* ===== JobPortal - Smooth Animations ===== */
 
-    </style>
+
+.job-description-card {
+    animation: jobCardFloat 5s ease-in-out infinite;
+    will-change: transform;
+}
+
+
+@keyframes jobCardFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-4deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-2deg);
+    }
+}
+
+
+/* AI Matching Card Animation */
+.ai-card {
+    animation: aiCardFloat 4s ease-in-out infinite;
+    will-change: transform, box-shadow;
+}
+
+@keyframes aiCardFloat {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 18px 45px rgba(22, 85, 140, 0.17);
+    }
+    50% {
+        transform: translateY(-9px);
+        box-shadow: 0 24px 50px rgba(22, 120, 220, 0.24);
+    }
+}
+
+/* Candidate Cards Entrance Animation */
+.candidate {
+    animation: candidateAppear 700ms ease both;
+}
+
+.candidate:nth-child(1) {
+    animation-delay: 150ms;
+}
+
+.candidate:nth-child(2) {
+    animation-delay: 350ms;
+}
+
+.candidate:nth-child(3) {
+    animation-delay: 550ms;
+}
+
+@keyframes candidateAppear {
+    from {
+        opacity: 0;
+        transform: translateX(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+    .job-description-card,
+    .ai-card,
+    .candidate {
+        animation: none !important;
+    }
+}
+
+.hero-video {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 80, 200, 0.18);
+}
+
+.hero-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.job-search-form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+    gap: 8px;
+    max-width: 680px;
+    margin: 26px 0;
+    padding: 8px;
+    border: 1px solid #e0e8f3;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 12px 32px rgba(22, 59, 112, 0.08);
+}
+
+.job-search-form input {
+    min-width: 0;
+    height: 46px;
+    padding: 0 13px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    color: #172b4d;
+    font: inherit;
+}
+
+.job-search-form input:focus {
+    border-color: #8db7fb;
+    outline: 2px solid rgba(18, 103, 216, 0.12);
+}
+
+.job-search-form button {
+    min-height: 46px;
+    padding: 0 18px;
+    border: 0;
+    border-radius: 9px;
+    background: #1267d8;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.job-search-form button:hover {
+    background: #084fae;
+}
+
+details.view-job {
+    position: relative;
+    min-width: 150px;
+    padding: 0;
+    background: transparent;
+    color: #ffffff;
+}
+
+details.view-job > summary {
+    list-style: none;
+    padding: 9px 17px;
+    border-radius: 7px;
+    background: #1267d8;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+details.view-job > summary::-webkit-details-marker {
+    display: none;
+}
+
+.job-detail-panel {
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    width: min(420px, 90vw);
+    margin-top: 8px;
+    padding: 18px;
+    border: 1px solid #e5edf4;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 16px 40px rgba(30, 70, 110, 0.14);
+    color: #344054;
+    line-height: 1.6;
+}
+
+@media (max-width: 650px) {
+    .job-search-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+ </style>
 </head>
 
 
@@ -797,16 +974,16 @@
             Jobs
         </a>
 
-        <a href="#">
+        <a href="posting-job.html">
             Post a Job
         </a>
 
-        <a href="#">
+        <a href="pricing.html">
             Pricing
         </a>
 
-        <a href="#">
-            Resources
+        <a href="index.html#success-stories">
+            Success stories
         </a>
 
     </div>
@@ -816,12 +993,12 @@
 
     <div class="auth-links">
 
-        <a href="#" class="login-btn">
-            Login
+        <a href="pages/employee.html" class="login-btn">
+            Find a job
         </a>
 
-        <a href="#" class="get-started">
-            Get Started
+        <a href="posting-job.html" class="get-started">
+            For employers
         </a>
 
     </div>
@@ -857,11 +1034,16 @@
 
         <p class="hero-text">
 
-            Find pre-screened, job-ready talent with AI.
-            Post a job, discover matching candidates and
-            build your team faster, smarter and simpler.
+            Find relevant candidates, create clearer job posts and
+            keep hiring decisions organised with JobPortal.
 
         </p>
+
+        <form class="job-search-form" action="/" method="get" role="search" aria-label="Search job listings">
+            <input type="search" name="keyword" value="{{ keyword }}" placeholder="Job title or skills" aria-label="Job title or skills">
+            <input type="search" name="location" value="{{ location }}" placeholder="City or location" aria-label="City or location">
+            <button type="submit">Search jobs</button>
+        </form>
 
 
 
@@ -949,11 +1131,11 @@
         <div class="hero-buttons">
 
             <a href="#jobs" class="primary-btn">
-                Find your next candidate →
+                Browse open roles
             </a>
 
-            <a href="#" class="secondary-btn">
-                Post a job
+            <a href="posting-job.html" class="secondary-btn">
+                Explore employer tools
             </a>
 
         </div>
@@ -1390,9 +1572,11 @@
                 </div>
 
 
-                <div class="job-info">
-                    📍 {{ job.location }}
-                </div>
+                {% if job.location %}
+                    <div class="job-info">
+                        {{ job.location }}
+                    </div>
+                {% endif %}
 
 
                 <div class="job-info">
@@ -1400,27 +1584,39 @@
                 </div>
 
 
-                <div class="job-info">
-                    🧑‍💻 {{ job.experience }}
-                </div>
+                {% if job.experience %}
+                    <div class="job-info">
+                        {{ job.experience }}
+                    </div>
+                {% endif %}
 
 
-                <div class="skills">
-                    🛠️ {{ job.skills }}
-                </div>
+                {% if job.skills %}
+                    <div class="skills">
+                        {{ job.skills }}
+                    </div>
+                {% endif %}
 
 
                 <div class="job-bottom">
 
 
-                    <div class="salary">
-                        ₹ {{ job.salary }}
-                    </div>
+                    {% if job.salary %}
+                        <div class="salary">
+                            ₹ {{ job.salary }}
+                        </div>
+                    {% endif %}
 
 
-                    <a href="#" class="view-job">
-                        View Job
-                    </a>
+                    <details class="view-job">
+                        <summary>View details</summary>
+                        <div class="job-detail-panel">
+                            <p>{{ job.description }}</p>
+                            {% if job.requirements %}
+                                <p><strong>Requirements:</strong> {{ job.requirements }}</p>
+                            {% endif %}
+                        </div>
+                    </details>
 
 
                 </div>
@@ -1443,14 +1639,16 @@
 
             </div>
 
-
         {% endfor %}
-
-
     </div>
 
 </section>
 
+<div class="hero-video">
+    <video autoplay muted loop playsinline>
+        <source src="{% static 'jobportal_hero_animation.mp4' %}" type="video/mp4">
+    </video>
+</div>
 
 
 <!-- ================= FOOTER ================= -->
@@ -1462,6 +1660,9 @@
     </p>
 
 </footer>
+
+<!-- JobPortal hero animation -->
+
 
 
 </body>
